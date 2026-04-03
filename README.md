@@ -25,3 +25,14 @@ This project automates the creation of a hardened AWS S3 environment and provide
 ├── src/                # Python backend logic
 │   └── handler.py      # Presigned URL generation logic
 └── README.md           # Documentation
+```
+## Results & Verification
+<img width="1117" height="52" alt="image" src="https://github.com/user-attachments/assets/0714647f-3acc-436b-8278-8c127792f3cb" />
+
+Infrastructure Validation: Successfully deployed the S3 environment via Terraform, confirming that all Public Access Block settings were active upon creation.
+
+Security Testing: Attempted to access the test.mp3 file directly via its public S3 URL; confirmed that AWS returned a 403 Access Denied error as expected.
+
+Functional Testing: Verified that the Python Boto3 script generated a valid Presigned URL.
+
+Lifecycle Management: Used the temporary link to successfully stream the audio file, and verified that the link expired automatically after the set duration (30 minutes), restoring the "Private" state of the asset.
