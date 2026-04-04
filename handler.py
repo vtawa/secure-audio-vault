@@ -15,7 +15,7 @@ def generate_presigned_url(bucket_name, object_name):
 
 if __name__ == "__main__":
     # Ensure this matches the bucket you saw in the AWS Console!
-    MY_BUCKET = "tawas-secure-audio-vault-v2" 
+    MY_BUCKET = "YOUR-BUCKET-NAME-HERE" 
     MY_FILE = "test.mp3"
     
     generated_link = generate_presigned_url(MY_BUCKET, MY_FILE)
