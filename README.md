@@ -27,11 +27,9 @@ This project automates the creation of a hardened AWS S3 environment and provide
 └── README.md           # Documentation
 ```
 ## Setup & Deployment Instructions
-1. Prerequisites
+# 1. Prerequisites
 Terraform installed.
-
 Python 3.x installed.
-
 AWS CLI configured or Access Keys ready.
 
 ## 2. Infrastructure Build
