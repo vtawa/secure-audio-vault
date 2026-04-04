@@ -26,43 +26,43 @@ This project automates the creation of a hardened AWS S3 environment and provide
 │   └── handler.py      # Presigned URL generation logic
 └── README.md           # Documentation
 ```
-## Setup & Deployment Instructions
-# 1. Prerequisites
+# Setup & Deployment Instructions
+## 1. Prerequisites
 Terraform installed.
 Python 3.x installed.
 AWS CLI configured or Access Keys ready.
 
-## 2. Infrastructure Build
-# Navigate to terraform directory
+# 2. Infrastructure Build
+## Navigate to terraform directory
 cd terraform
 
-# Initialize and deploy
+## Initialize and deploy
 terraform init
 terraform apply -auto-approve
-## 3. Upload Test Asset
+# 3. Upload Test Asset
 Log into the AWS S3 Console.
 
 Find your bucket (e.g., secure-audio-vault).
 
 Upload a file named test.mp3.
-## 4. Run the Access Link Generator
-# Navigate to the source directory
+# 4. Run the Access Link Generator
+## Navigate to the source directory
 cd ../src
 
-# Install dependencies
+## Install dependencies
 pip install boto3
 
-# Set your temporary session credentials (if not using AWS CLI)
+## Set your temporary session credentials (if not using AWS CLI)
 $env:AWS_ACCESS_KEY_ID="your_key"
 $env:AWS_SECRET_ACCESS_KEY="your_secret"
 $env:AWS_DEFAULT_REGION="us-east-1"
 
-# Run the script
+## Run the script
 python handler.py
-## 5. Cleanup
-# To avoid AWS charges after testing, run:
+# 5. Cleanup
+## To avoid AWS charges after testing, run:
 terraform destroy -auto-approve
-## Results & Verification
+# Results & Verification
 <img width="1117" height="52" alt="image" src="https://github.com/user-attachments/assets/0714647f-3acc-436b-8278-8c127792f3cb" />
 
 Infrastructure Validation: Successfully deployed the S3 environment via Terraform, confirming that all Public Access Block settings were active upon creation.
