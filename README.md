@@ -30,7 +30,7 @@ This project automates the creation of a hardened AWS S3 environment and provide
 ## 1. Prerequisites
 * **Terraform installed.**
 * **Python 3.x installed.**
-AWS CLI configured or Access Keys ready.
+* **AWS CLI configured or Access Keys ready.**
 
 # 2. Infrastructure Build
 ## Navigate to terraform directory
@@ -53,9 +53,9 @@ cd ../src
 pip install boto3
 
 ## Set your temporary session credentials (if not using AWS CLI)
-$env:AWS_ACCESS_KEY_ID="your_key"
-$env:AWS_SECRET_ACCESS_KEY="your_secret"
-$env:AWS_DEFAULT_REGION="us-east-1"
+* **$env:AWS_ACCESS_KEY_ID="your_key"**
+* **$env:AWS_SECRET_ACCESS_KEY="your_secret"**
+* **$env:AWS_DEFAULT_REGION="us-east-1"**
 
 ## Run the script
 python handler.py
